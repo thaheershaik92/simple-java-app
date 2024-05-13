@@ -5,7 +5,7 @@ FROM openjdk:11-jdk-slim
 WORKDIR /app
 
 # Copy the compiled Java application JAR file into the container
-COPY /app/example.jar
+COPY /app/example .
 
 #Expose the port
 EXPOSE 8000
@@ -14,4 +14,4 @@ EXPOSE 8000
 RUN javac example.java
 
 # Define the command to run the Java application
-CMD ["java", "example.jar"]
+CMD ["java", "example"]
